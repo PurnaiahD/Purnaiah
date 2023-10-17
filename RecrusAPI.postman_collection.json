@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "2e6e9698-cfcf-4189-9291-4bd60004a46a",
+		"name": "RecrusAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29299345",
+		"_collection_link": "https://bold-crater-348810.postman.co/workspace/RCV-API-Testing~98a4ddbb-582d-4a10-a637-91b228d654c0/collection/29299345-2e6e9698-cfcf-4189-9291-4bd60004a46a?action=share&source=collection_link&creator=29299345"
+	},
+	"item": [
+		{
+			"name": "Get recrus First",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let multiple = (a,b)=> console.log(a*b);\r",
+							"let add=(a,b)=> console.log(a+b);\r",
+							"function test(testname, callbackfunction,num1,num2){\r",
+							"console.log(testname);\r",
+							"callbackfunction(num1,num2)\r",
+							"}\r",
+							"testname(\"this is call back function\", add, 12,10);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// function addition(a,b){\r",
+							"//     console.log(a+b);\r",
+							"//    // return(a+b);\r",
+							"// }\r",
+							"// let x=addition(12,13);\r",
+							"// console.log(x);\r",
+							"let addition=(a,b)  => {\r",
+							"    console.log(a+b);\r",
+							"    return(a+b);\r",
+							"}\r",
+							"let x= addition(10,20)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/3",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Purna1\",\r\n    \"job\": \"Tester\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PartialUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"janu\",\r\n    \"job\": \"Student\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"janu1\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"janu1\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test_url}}/api/users/2",
+					"host": [
+						"{{test_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
